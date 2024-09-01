@@ -8,40 +8,56 @@ const QRCodeCard = () => {
       sx={{
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignContent: 'center',
         minHeight: '100vh',
         bgcolor: 'hsl(212, 45%, 89%)',
       }}
     >
       <Card
         sx={{
-          maxWidth: 320,
-          borderRadius: '16px',
-          boxShadow: '0px 25px 50px -12px rgba(0, 0, 0, 0.25)',
+          width: 320,
+          borderRadius: '1.25em',
+          // boxShadow: '0px 25px 50px -12px rgba(0, 0, 0, 0.25)',
+          margin: 'auto',
+          height: 499,
+          display: 'flex',
+          justifyContent: 'space-between',
+          flexDirection: 'column',
+          alignItems: 'center',
         }}
       >
         <CardContent>
-          <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              mb: 3,
+            }}
+          >
             <Image
               src={'/assets/image-qr-code.png'}
               alt="QR Code"
-              style={{ borderRadius: '8px', width: '100%', height:'100%' }}
-              width={160}
-              height={160}
+              style={{
+                borderRadius: '0.75em',
+                // width: '288px',
+                // height: '288px',
+              }}
+              width={288}
+              height={288}
             />
           </Box>
           <Typography
             variant="h6"
             component={'h1'}
             sx={{
-              fontFamily: 'Outfit',
-              fontSize: '24px',
+              fontFamily:'Outfit, sans-serif',
+              fontSize: '22px',
               fontWeight: 700,
               color: 'hsl(218, 44%, 22%)',
               textAlign: 'center',
-              marginBottom: '30px',
+              marginBottom: '16px',
               lineHeight: '28px',
-              mb: 1,
+              // mb: 1,
             }}
           >
             Improve your front-end skills by building projects
@@ -49,12 +65,15 @@ const QRCodeCard = () => {
           <Typography
             variant="body2"
             sx={{
-              fontFamily: 'Outfit',
+              fontFamily:'Outfit, sans-serif',
+              fontSize:'15px',
               fontWeight: 400,
               color: 'hsl(216, 15%, 48%)',
               textAlign: 'center',
-              marginBottom: '42px',
+              // marginBottom: '26px',
               lineHeight: '18px',
+              marginLeft: '16px',
+              marginRight: '16px',
             }}
           >
             Scan the QR code to visit Frontend Mentor and take your coding
